@@ -1,0 +1,24 @@
+{
+    "name": "monkey92/httpclient",
+    "description": "easy for get&post",
+    "type": "lib",
+    "homepage":"https://github.com/monkey92/httpclient",
+    "authors": [
+        {
+            "name": "monkey92",
+            "email": "2223445830@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload":{
+        "psr-4":{
+            "Monkey92\\":"src/"
+        }
+    }
+    
+}
