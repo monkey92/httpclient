@@ -22,7 +22,10 @@ class HttpClient{
 
 
 
-	public function __construct(){}
+	public function __construct($requestHeaders=[],$cookie=''){
+		$this->requestHeaders = $requestHeaders;
+		$this->cookie = $cookie;
+	}
 
 	public function setCookie($cookie){
 	  $this->cookie = $cookie;
