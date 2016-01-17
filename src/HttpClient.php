@@ -4,6 +4,8 @@
 *	easy for http get&post    
 */
 
+namespace Monkey92;
+
 class HttpClient{
 
 	//requestHeaders
