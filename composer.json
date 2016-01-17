@@ -3,7 +3,7 @@
     "description": "easy for get&post",
     "type": "lib",
     "homepage":"https://github.com/monkey92/httpclient",
-    "liscense":"MIT",
+    "license":"MIT",
     "authors": [
         {
             "name": "monkey92",
