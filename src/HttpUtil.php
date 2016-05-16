@@ -14,7 +14,7 @@ class HttpUtil{
     
     public static function getInstance(){
         if(self::$httpUtil == null){
-            self::$httpUtil = new HttpUtil();
+            self::$httpUtil = new static();
         }
         return self::$httpUtil;        
     }
