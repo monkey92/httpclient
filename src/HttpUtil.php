@@ -54,8 +54,6 @@ class HttpUtil{
       return $this;
 	}
 
-
-
 	public  function doGet($url){
 	  	$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -68,9 +66,6 @@ class HttpUtil{
 	 	curl_close($ch);
 	  	return $out;
 	}
-
-
-
 
 	public  function doPost($url,$data){
 	  $ch = curl_init();
@@ -86,6 +81,25 @@ class HttpUtil{
 	  curl_close($ch);
 	  return $out;
 	}
+
+	
+	public function getRedirectUrl($url){
+		$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL,$url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($ch,CURLOPT_HEADER,true);
+		curl_setopt($ch,CURLOPT_NOBODY,true);
+		$ret = curl_exec($ch);
+		curl_close($ch);
+		$matched = preg_match('/Location: (\S+)/',$ret,$matchs);
+		if($matched === 0){
+			return '';
+		}
+		return $matchs[1];
+	}
+	
+
 
 
 
