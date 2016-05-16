@@ -9,7 +9,8 @@
 ## how to use
 
 ```php
-	$httpUtil = Httputil::getInstance();
+	use Monkey92\HttpUtil;
+	$httpUtil = HttpUtil::getInstance();
 	//get
 	$get_ret = $httpUtil->doGet('http://www.domain.com/user?id=1');
 	//post
