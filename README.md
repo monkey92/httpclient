@@ -1,4 +1,4 @@
-## easy for http get and post with php
+## php 使用curl扩展实现http请求
 
 ## download 
 
@@ -9,7 +9,7 @@
 ## how to use
 
 ```php
-	use Monkey92\HttpUtil;
+	use Monkey92\HttpClient;
 	$httpUtil = HttpUtil::getInstance();
 	//get
 	$get_ret = $httpUtil->doGet('http://www.domain.com/user?id=1');
